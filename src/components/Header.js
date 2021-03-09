@@ -10,11 +10,12 @@ function Header() {
                 src='http://pngimg.com/uploads/amazon/amazon_PNG11.png'
                 alt='Amazon logo'
                  />
-            <div className='flex flex-1 items-center rounded-3xl'>
+            <div className='flex flex-1 items-center'>
                 <input 
-                    className='h-10 p-2.5 w-full relative border-transparent focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent'
+                    className='h-10 p-2.5 rounded w-full relative border-transparent focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent'
                     type="text" />
-                <div className='px-2 pt-1.5 absolute z-50 float-right bg-yellow-500 h-10 rounded-r'>
+                <div className='px-2 pt-1.5 absolute z-50 float-right bg-yellow-500 h-10 rounded-r'
+                    style={{right: 324}}>
                     <SearchIcon style={{ fontSize: 30 }} />
                 </div>
             </div>
