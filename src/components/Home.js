@@ -8,8 +8,7 @@ function Home() {
         <div className='bg-gray-200 relative'>          
             <HomeCarousel />
             <ProductOne />
-            <ProductOne />
-            <ProductOne />
+            
             <div className='bg-gray-200 h-screen'></div>
           
             
