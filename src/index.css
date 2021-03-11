@@ -6,3 +6,18 @@
     z-index: 100;
 
 }
+
+input.form-height {
+    height: 12;
+    width: 100%;
+    font-size: 6;
+}
+
+@media only screen and (min-width: 768px) {
+    input.form-height {
+        height: 36;
+        width: 100%;
+        font-family: 24;
+        
+    }
+}
