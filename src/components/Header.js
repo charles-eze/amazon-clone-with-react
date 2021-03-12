@@ -4,7 +4,7 @@ import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 
 function Header() {
     return (
-        <div className='h-5 md:h-14 w-full flex items-center sticky justify-between bg-black'>
+        <div className='h-5 md:h-16 w-full flex items-center sticky justify-between bg-black'>
             <div className='flex object-fill w-9 md:w-32 md:pt-2 md:px-2.5 md:ml-3 md:mr-7 md:border-black md:border md:hover:border-white'>
                 <img
                     className='p-0.5'
