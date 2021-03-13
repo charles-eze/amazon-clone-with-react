@@ -1,8 +1,8 @@
 import React from 'react';
 
-function ProductTwo({image, imagealt, link}) {
+function ProductThree({image, imagealt, link}) {
     return (
-        <div className=' bg-white pt-2 pr-3.5 pb-7 '>
+         <div className=' bg-white pt-2 pr-3.5 pb-7 '>
             <a href={link}>
                 <img 
                 className=''
@@ -14,4 +14,4 @@ function ProductTwo({image, imagealt, link}) {
     )
 }
 
-export default ProductTwo;
+export default ProductThree;

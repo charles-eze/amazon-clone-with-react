@@ -79,7 +79,16 @@ function HomeCarousel() {
                 <Slide right>
                     <div className=''>
                         <img
+                            className='image-six'
                             src='https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Hero/Fuji_TallHero_Home_v2_en_US_1x._CB429090084_.jpg'
+                            alt='Amazon banner 5' />
+                    </div>
+                </Slide>
+                <Slide right>
+                    <div className=''>
+                        <img
+                            className='image-six'
+                            src='https://images-na.ssl-images-amazon.com/images/G/01/AmazonMusic/2021/Marketing/EvergreenQ1/Gateway/US-EN_AMU_EvergreenQ1_DMUX-3799_JZ_OnS_GW_Hero_D_1500x600_1X_CV1._CB412009348_.jpg'
                             alt='Amazon banner 5' />
                     </div>
                 </Slide>
