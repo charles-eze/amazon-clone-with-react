@@ -4,19 +4,19 @@ import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 
 function Header() {
     return (
-        <div className='h-5 md:h-16 w-full flex items-center sticky justify-between bg-black'>
+        <div className='h-5 md:h-14 w-full flex items-center sticky justify-between bg-black'>
             <div className='flex object-fill w-9 md:w-32 md:pt-2 md:px-2.5 md:ml-3 md:mr-7 md:border-black md:border md:hover:border-white'>
                 <img
                     className='p-0.5'
                     src='http://pngimg.com/uploads/amazon/amazon_PNG11.png'
                     alt='Amazon logo' />
             </div>
-            <div className='flex h-3 md:h-10 w-48 md:flex-1 md:items-center '>
+            <div className='flex h-3 md:h-10 w-48 md:w-7/12 md:items-center '>
                 <input 
                     type='text'
-                    className='relative md:w-full md:h-9 w-full form-height rounded-sm border-transparent focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent ' />
+                    className='relative md:w-full md:h-9 w-full rounded-sm border-transparent focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent ' />
                 <SearchIcon 
-                        className='bg-yellow-500 md:text-4xl relative rounded-r-sm right-3 md:right-9'
+                        className='bg-yellow-500  md:text-4xl search-icon relative rounded-r-sm right-3 md:right-9'
                         style={{fontSize: 12}} />
             </div>
             <div className='flex text-white -left-24 md:-left-0'>

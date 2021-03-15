@@ -4,37 +4,37 @@ function HeaderTwo() {
     return (
         <div className='relative flex items-center justify-between bg-gray-800 h-3.5 md:h-10 text-white'>
             <div className='flex relative ml-2 md:pb-0 md:ml-6 '>
-                <div className='pr-2 md:px-2 md:border border-transparent hover:border-white'>
+                <div className='pr-2 md:px-2 md:pt-1 md:border border-transparent hover:border-white'>
                     <a 
                         href='https://amazon.com'
                         className='md:text-sm md:font-semibold'
                         style={{fontSize: 5, fontWeight: 600}}>All</a>
                 </div>
-                <div className='pr-2 md:px-2 md:border border-transparent hover:border-white'>
+                <div className='pr-2 md:px-2 md:pt-0.5 md:border border-transparent hover:border-white'>
                     <a  
                         href='https://amazon.com'
                         className='md:py-1 md:text-sm'
                         style={{fontSize: 5, fontWeight: 600}}>Today's Deals</a>
                 </div>
-                <div className='pr-2 md:px-2 md:border border-transparent hover:border-white'>
+                <div className='pr-2 md:px-2 md:pt-0.5 md:border border-transparent hover:border-white'>
                     <a  
                         href='https://amazon.com'
                         className='md:py-1 md:text-sm'
                         style={{fontSize: 5, fontWeight: 600}}>Customer Service</a>
                 </div>
-                <div className='pr-2 md:px-2 md:border border-transparent hover:border-white'>
+                <div className='pr-2 md:px-2 md:pt-0.5 md:border border-transparent hover:border-white'>
                     <a  
                         href='https://amazon.com'
                         className='md:py-1 md:text-sm'
                         style={{fontSize: 5, fontWeight: 600}}>Gift Cards</a>
                 </div>
-                <div className='pr-2 md:px-2 md:border border-transparent hover:border-white'>
+                <div className='pr-2 md:px-2 md:pt-0.5 md:border border-transparent hover:border-white'>
                     <a  
                         href='https://amazon.com'
                         className='md:py-1 md:text-sm'
                         style={{fontSize: 5, fontWeight: 600}}>Sell</a>
                 </div>
-                <div className='pr-2 pb-2.5 md:px-2 md:border border-transparent hover:border-white'>
+                <div className='pr-2 pb-2.5 md:pt-0.5 md:px-2 md:border border-transparent hover:border-white'>
                     <a  
                         href='https://amazon.com'
                         className='md:py-1 md:text-sm'
