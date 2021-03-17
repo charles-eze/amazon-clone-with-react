@@ -4,9 +4,9 @@ import Product from './Product';
 function ProductFour() {
     return (
         <div>
-            <section className='flex relative z-50 lg:top-60 top-20 md:top-40 px-5 '>
+            <section className='flex relative z-50 lg:top-60 top-20 md:top-40 md:px-5 px-1.5 '>
                 <div className='relative'>
-                    <div className='grid md:grid-cols-4 grid-cols-3 md:gap5 gap-4'>
+                    <div className='grid xl:grid-cols-4 grid-cols-3 md:gap-5 gap-1.5 mt-1.5 md:mt-0'>
                         <Product                                
                             title='Beauty picks'
                             image='https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Beauty_1x._SY304_CB432774351_.jpg'
@@ -25,12 +25,14 @@ function ProductFour() {
                             imagealt='Shop top categories'
                             link=''
                             linkTitle='See more' />
-                        <Product                                
-                            title='AmazonBasics'
-                            image='https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2019/July/amazonbasics_520x520._SY304_CB442725065_.jpg'
-                            imagealt='AmazonBasics'
-                            link=''
-                            linkTitle='See more' />
+                        <div className='hidden xl:flex'>
+                            <Product                                
+                                title='AmazonBasics'
+                                image='https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2019/July/amazonbasics_520x520._SY304_CB442725065_.jpg'
+                                imagealt='AmazonBasics'
+                                link=''
+                                linkTitle='See more' />
+                        </div>
                         
                     </div>
                 </div>    

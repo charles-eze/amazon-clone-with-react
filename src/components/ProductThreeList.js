@@ -4,17 +4,19 @@ import ProductThree from './ProductThree';
 function ProductThreeList() {
     return (
         <>
-        <div className='bg-white flex relative z-50 lg:top-60 top-20 md:top-40 px-6 pt-5 mt-5 mx-5 '>
-            <span className='text-gray-700 text-xl font-semibold pr-5'>Top Beauty & Personal Care products</span>
-            <span>
+        <div className='bg-white flex relative z-50 lg:top-60 top-20 md:top-40 md:pt-2.5 lg:pt-5 pt-2 px-1.5 md:px-2.5 lg:px-6 mt-1.5 md:mt-2.5 lg:mt-5 md:mx-2.5 lg:mx-5 mx-1.5  '>
+            <span className='text-gray-700 md:text-xl font-semibold pr-3 md:pr-5'
+                style={{fontSize: 9}}>Top Beauty & Personal Care products</span>
+            <span className='-mt-2 md:mt-1'>
                 <a
-                    className='text-blue-500 hover:underline text-sm'
-                    href=''>
+                    className='text-blue-500 hover:underline md:text-sm'
+                    href=''
+                    style={{fontSize: 7}}>
                     Shop now
                 </a>
             </span>
         </div>
-        <div className='bg-white flex relative z-50 lg:top-60 top-20 md:top-40 px-6 mx-5 overflow-x-auto flex-nowrap'>
+        <div className='bg-white flex relative z-50 lg:top-60 top-20 md:top-40  md:px-2.5 lg:px-6 px-1.5 mx-1.5 md:mx-2.5 lg:mx-5 overflow-x-auto flex-nowrap'>
             <div className='flex -mr-3 flex-2'>
                 <ProductThree 
                     image='https://m.media-amazon.com/images/I/41Z7qvCN+UL._AC_SY200_.jpg'
