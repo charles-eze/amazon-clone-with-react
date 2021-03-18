@@ -4,7 +4,7 @@ import Product from './Product';
 function ProductOne() {
     return (
         <div>
-            <section className='flex relative z-50 lg:top-60 top-20 md:top-40 px-1.5 md:2.5 lg:px-5 '>
+            <section className='flex relative z-50 xl:top-60 lg:top-48 top-20 md:top-40 px-1.5 md:px-2.5 lg:px-5 '>
                 <div className='relative'>
                     <div className='grid xl:grid-cols-4 grid-cols-3 md:gap-2.5 lg:gap-5 gap-1.5'>
                         <Product                                
@@ -37,7 +37,7 @@ function ProductOne() {
                             </div>
                             <div className=''>
                                 <img 
-                                    className='lg:mt-4 mt-1.5 md:mt-2.5 pl-1 md:pl-2 '
+                                    className='lg:mt-4 mt-1.5 md:mt-2.5 object-fill md:object-cover h-24 md:h-auto w-full pl-1 md:pl-2 '
                                     src='https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/October/Fuji_D2_45M_en_US_1x._CB418309979_.jpg'
                                     alt='We deliver worldwide' />
                             </div>                                   

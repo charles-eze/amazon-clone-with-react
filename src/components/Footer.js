@@ -3,10 +3,10 @@ import React from 'react';
 function Footer() {
     return (
         <footer className='md:pt-10 font-sans pt-4 relative -top-0 z-50 flex-col bg-gray-800 text-white'>
-            <section className='grid grid-cols-4 pl-2 pr-1 md:pl-44 md:pr-32 gap-1 md:gap-12'>
-                <article className='md:text-sm flex flex-col'
+            <section className='grid grid-cols-4 pl-2 pr-1 md:pl-5 md:pr-5 xl:pl-44 xl:pr-32 gap-1 lg :gap-12'>
+                <article className='md:text-xs lg:text-sm flex flex-col'
                         style={{fontSize: 5}}>
-                    <p className='md:text-base font-bold'
+                    <p className='md:text-sm lg:text-base font-bold'
                         style={{fontSize: 6}}>Get to Know Us</p>
                     <a href='' 
                         className='md:py-1 py-0.5'>Careers</a>
@@ -23,9 +23,9 @@ function Footer() {
                     <a href='' 
                         className='md:py-1 py-0.5'>Amazon Tours</a>
                 </article>
-                <article className='flex flex-col pr-7 md:pr-12 -ml-1 md:-ml-0 md:text-sm'
+                <article className='flex flex-col pr-7 lg:pr-12 -ml-1 md:-ml-4 lg:-ml-0 md:text-xs lg:text-sm'
                         style={{fontSize: 5}}>
-                    <p className='md:text-base font-bold' 
+                    <p className='md:text-sm lg:text-base font-bold' 
                         style={{fontSize: 6}}>Make Money with Us</p>
                     <a href='' 
                         className='md:py-1 py-0.5'>Sell products on Amazon</a>
@@ -42,9 +42,9 @@ function Footer() {
                     <a href='' 
                         className='md:py-1 py-0.5'>See More Make Money with Us</a>
                 </article>
-                <article className='flex flex-col -ml-3 md:-ml-0 md:text-sm'
+                <article className='flex flex-col -ml-3 lg:-ml-0 md:text-xs lg:text-sm'
                         style={{fontSize: 5}}>
-                    <p className='md:text-base font-bold'
+                    <p className='md:text-sm lg:text-base font-bold'
                         style={{fontSize: 6}}>Amazon Payment Products</p>
                     <a href='' 
                         className='md:py-1 py-0.5'>Amazon Business Card</a>
@@ -55,9 +55,9 @@ function Footer() {
                     <a href='' 
                         className='md:py-1 py-0.5'>Amazon Currency Converter</a>
                 </article>
-                <article className='flex flex-col md:pr-20 pr-5 md:text-sm'
+                <article className='flex flex-col lg:pr-20 pr-5 md:text-xs lg:text-sm'
                         style={{fontSize: 5}}>
-                    <p className='md:text-base font-bold'
+                    <p className='md:text-xs lg:text-base font-bold'
                         style={{fontSize: 6}}>Let Us Help You</p>
                     <a href='' 
                         className='md:py-1 py-0.5'>Amazon and COVID-19</a>

@@ -8,7 +8,7 @@ function Product({ title, image, link, imagealt, linkTitle }) {
                 <p>{title}</p>
             </div>
             <img 
-            className='lg:pb-1 object-fill lg:h-72 md:h-64 w-full h-28'
+            className='lg:pb-1 object-cover lg:h-72 md:h-64 w-full h-28'
             src={image}
             alt={imagealt} />
             <div className='lg:py-3 py-0'>
