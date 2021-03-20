@@ -1,15 +1,16 @@
 import React from 'react';
+import { NavLink as Link } from "react-router-dom";
 
-function ProductTwo({image, imagealt, link}) {
+function ProductTwo({image, imagealt}) {
     return (
         <div className=' bg-white md:pt-2 pt-1 pr-1 pb-3 md:pr-3.5 md:pb-7 '>
-            <a href={link}>
+            <Link to='/products'>
                 <img 
                 className='md:h-auto h-20'
                 src={image}
                 alt={imagealt}
-                href={link} />
-            </a>
+                to='/products' />
+            </Link>
         </div>
     )
 }

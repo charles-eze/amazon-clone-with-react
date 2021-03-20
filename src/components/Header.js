@@ -1,15 +1,20 @@
 import React from 'react';
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
+import { NavLink as Link } from "react-router-dom";
 
 function Header() {
     return (
         <div className='h-5 md:h-14 w-full flex items-center sticky justify-between bg-black'>
             <div className='flex object-fill w-9 md:w-32 md:pt-2 md:px-2.5 md:ml-3 md:mr-7 border-black xl:border hover:border-white'>
-                <img
-                    className='p-0.5'
-                    src='http://pngimg.com/uploads/amazon/amazon_PNG11.png'
-                    alt='Amazon logo' />
+                <Link
+                     to='/' exact>
+                    <img
+                        to='/' exact
+                        className='p-0.5'
+                        src='http://pngimg.com/uploads/amazon/amazon_PNG11.png'
+                        alt='Amazon logo' />
+                </Link>
             </div>
             <div className='flex h-3 md:h-10 w-3/5 md:w-96 lg:w-3/6 xl:w-7/12 md:items-center '>
                 <input 
@@ -29,9 +34,10 @@ function Header() {
                     <span className='md:text-sm md:font-bold' style={{fontSize: 6, fontWeight: 700}}>{'&'} Orders</span>
                 </div>
                 <div className='flex pr-1.5 items-center md:ml-2.5 md:px-0.5 lg:px-3 lg:py-0 md:mr-3 xl:border border-black hover:border-white'>
-                    <ShoppingBasketIcon className='md:text-2xl' style={{fontSize: 10}}/>
-                    <span className='md:text-sm md:font-bold md:mr-2.5' style={{fontSize: 6, fontWeight: 700}}>0</span>
-
+                    <Link to='/checkout'>
+                        <ShoppingBasketIcon className='md:text-2xl' style={{fontSize: 10}}/>
+                        <span className='md:text-sm md:font-bold md:mr-2.5' style={{fontSize: 6, fontWeight: 700}}>0</span>
+                    </Link>
                 </div>
 
             </div>

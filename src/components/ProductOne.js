@@ -11,19 +11,16 @@ function ProductOne() {
                             title='Beauty picks'
                             image='https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_Beauty_1x._SY304_CB432774351_.jpg'
                             imagealt='Beauty Products'
-                            link=''
                             linkTitle='Shop now' />
                         <Product
                             title='Get fit at home'
                             image='https://images-na.ssl-images-amazon.com/images/G/01/events/GFAH/GWDesktop_SingleImageCard_fitathome_1x._SY304_CB434924743_.jpg'
                             imagealt='Get fit at home'
-                            link=''
                             linkTitle='Explore now' />
                         <Product
                             title='Shop top categories'
                             image='https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2020/PrimeDay/Fuji_Dash_PD_Nonprime__1x._SY304_CB403084762_.jpg'
                             imagealt='Shop top categories'
-                            link=''
                             linkTitle='See more' />
                         <div className=' '>
                             <div className='lg:pt-5 pt-2  bg-white  px-0.5 md:px-2.5 lg:px-5'>
@@ -46,32 +43,27 @@ function ProductOne() {
                             title='AmazonBasics'
                             image='https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2019/July/amazonbasics_520x520._SY304_CB442725065_.jpg'
                             imagealt='AmazonBasics'
-                            link=''
                             linkTitle='See more' />
                         <Product
                             title='Shop by Category'
                             image='https://images-na.ssl-images-amazon.com/images/G/01/events/GFAH/GWDesktop_SingleImageCard_fitathome_1x._SY304_CB434924743_.jpg'
                             imagealt='Get fit at home'
-                            link=''
                             linkTitle='Shop now' />
                         <Product
                             title='Computers & Accessories'
                             image='https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_PC_1x._SY304_CB431800965_.jpg'
                             imagealt='Computers and Accessories'
-                            link=''
                             linkTitle='Shop now' />
                         <Product
                             title='Find your ideal TV'
                             image='https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_TV_2X._SY304_CB432517900_.jpg'
                             imagealt='Find your ideal TV'
-                            link=''
                             linkTitle='See more' />
                         <div className='xl:hidden '>
                             <Product
                                 title='Shop top categories'
                                 image='https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2020/PrimeDay/Fuji_Dash_PD_Nonprime__1x._SY304_CB403084762_.jpg'
                                 imagealt='Shop top categories'
-                                link=''
                                 linkTitle='See more' />
                         </div>
                     </div>
