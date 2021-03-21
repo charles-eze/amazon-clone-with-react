@@ -1,20 +1,21 @@
 import React from 'react';
+import { NavLink as Link } from "react-router-dom";
 
 function HeaderTwo() {
     return (
         <div className='relative flex items-center justify-between bg-gray-800 h-3.5 md:h-10 text-white'>
             <div className='flex relative ml-2 md:pb-0 md:ml-6 '>
                 <div className='pr-2 md:pr-3.5 lg:px-2 md:pt-0.5 xl:border border-transparent hover:border-white'>
-                    <a 
-                        href='https://amazon.com'
+                    <Link 
+                        to='/products'
                         className='md:text-xs lg:text-sm md:font-semibold'
-                        style={{fontSize: 5, fontWeight: 600}}>All</a>
+                        style={{fontSize: 5, fontWeight: 600}}>All</Link>
                 </div>
                 <div className='pr-2 md:pr-3.5  lg:px-2 md:pt-0.5 xl:border border-transparent hover:border-white'>
-                    <a  
-                        href='https://amazon.com'
+                    <Link  
+                        to='/products'
                         className='md:py-1 md:text-xs lg:text-sm '
-                        style={{fontSize: 5, fontWeight: 600}}>Today's Deals</a>
+                        style={{fontSize: 5, fontWeight: 600}}>Today's Deals</Link>
                 </div>
                 <div className='pr-2 md:pr-3.5 lg:px-2 md:pt-0.5 xl:border border-transparent hover:border-white'>
                     <a  

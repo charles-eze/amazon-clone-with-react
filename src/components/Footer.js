@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink as Link } from "react-router-dom";
 
 function Footer() {
     return (
@@ -78,14 +79,14 @@ function Footer() {
                 </article>
             </section>
             <div className='border-b w-full relative border-gray-50 p-5'></div>
-            <div className='justify-center items-center relative flex py-6' >
+            <Link className='justify-center items-center relative flex py-6' to='/' exact>
                 <img 
                     className='md:w-20 w-10 -ml-5 items-center pt-1.5 md:pt-4'
                     src='http://pngimg.com/uploads/amazon/amazon_PNG11.png'
                     alt='Amazon footer logo'/>
                 <p className='pl-12 md:text-base'
                     style={{fontSize: 7}}>©️ {new Date().getFullYear()}, Amazon-Clone Developed By Charles Eze</p>
-            </div>
+            </Link>
         </footer>
     )
 };

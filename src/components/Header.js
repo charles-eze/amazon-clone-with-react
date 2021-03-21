@@ -2,11 +2,15 @@ import React from 'react';
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import { NavLink as Link } from "react-router-dom";
+import { useStateValue } from '../StateProvider';
 
 function Header() {
+    // dispatch is not in use, left it here anyways
+    const [{ basket }, dispatch] = useStateValue();
+
     return (
         <div className='h-5 md:h-14 w-full flex items-center sticky justify-between bg-black'>
-            <div className='flex object-fill w-9 md:w-32 md:pt-2 md:px-2.5 md:ml-3 md:mr-7 border-black xl:border hover:border-white'>
+            <div className='flex object-fill w-9 md:w-32 pt-1.5 md:pt-2 md:px-2.5 md:ml-3 md:mr-7 border-black xl:border hover:border-white'>
                 <Link
                      to='/' exact>
                     <img
@@ -25,18 +29,19 @@ function Header() {
                         style={{fontSize: 12}} />
             </div>
             <div className='flex text-white -left-24 md:-left-0'>
-                <div className='flex flex-col pt-0.5 md:pt-0 pr-2 md:pr-0 lg:pr-2 lg:ml-2.5 lg:px-3 lg:pb-0.5 xl:border border-black hover:border-white'>
+                <Link to='/login'
+                    className='flex flex-col pt-1.5 md:pt-0 pr-2 md:pr-0 lg:pr-2 lg:ml-2.5 lg:px-3 lg:pb-0.5 xl:border border-black hover:border-white'>
                     <span className='md:text-xs md:pt-2 -mb-0.5' style={{fontSize: 4}} >Hello, Sign in</span>
                     <span className='md:text-sm md:font-bold' style={{fontSize: 6, fontWeight: 700}} >Account</span>
-                </div>
-                <div className='flex flex-col pr-2 pt-0.5 md:pt-0 md:ml-2.5 md:px-1 lg:px-3 lg:pb-0.5 xl:border border-black hover:border-white'>
+                </Link>
+                <div className='flex flex-col pr-2 pt-1.5 md:pt-0 md:ml-2.5 md:px-1 lg:px-3 lg:pb-0.5 xl:border border-black hover:border-white'>
                     <span className='md:text-xs -mb-0.5 md:pt-2' style={{fontSize: 4}} >Returns</span>
                     <span className='md:text-sm md:font-bold' style={{fontSize: 6, fontWeight: 700}}>{'&'} Orders</span>
                 </div>
-                <div className='flex pr-1.5 items-center md:ml-2.5 md:px-0.5 lg:px-3 lg:py-0 md:mr-3 xl:border border-black hover:border-white'>
+                <div className='flex pr-1.5 items-center -mt-0.5 md:ml-2.5 md:px-0.5 lg:px-3 lg:py-0 md:mr-3 xl:border border-black hover:border-white'>
                     <Link to='/checkout'>
                         <ShoppingBasketIcon className='md:text-2xl' style={{fontSize: 10}}/>
-                        <span className='md:text-sm md:font-bold md:mr-2.5' style={{fontSize: 6, fontWeight: 700}}>0</span>
+                        <span className='md:text-sm md:font-bold md:mr-2.5' style={{fontSize: 6, fontWeight: 700}}>{basket?.length}</span>
                     </Link>
                 </div>
 

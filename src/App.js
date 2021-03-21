@@ -5,6 +5,7 @@ import HeaderTwo from "./components/HeaderTwo";
 import Home from "./components/Home";
 import ProductDisplay from "./components/ProductDisplay";
 import Checkout from "./components/Checkout";
+import Login from "./components/Login";
 import ScrollToTop from "./components/ScrollToTop";
 
 
@@ -13,15 +14,24 @@ function App() {
   return (
     <BrowserRouter>
     <ScrollToTop />
-      <Header />
-      <HeaderTwo />
       <Switch>
-        <Route component={ Home } path='/' exact />
-        <Route component={ ProductDisplay } path='/products' />
-        <Route component={ Checkout } path='/checkout' />
+        <Route component={ Home } path='/' exact >
+          <Header />
+          <HeaderTwo />
+          <Home />
+        </Route>
+        <Route component={ ProductDisplay } path='/products' >
+          <Header />
+          <HeaderTwo />
+          <ProductDisplay />
+        </Route>
+        <Route component={ Checkout } path='/checkout' >
+          <Header />
+          <HeaderTwo />
+          <Checkout />
+        </Route>
+        <Route component={ Login } path='/login' />
       </Switch>
-      
-
     </BrowserRouter>
   );
 }
