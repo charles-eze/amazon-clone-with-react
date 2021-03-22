@@ -11,12 +11,15 @@ export const itemOrItems = (basket) =>
     basket?.length === 0 || basket?.length === 1 ? 'item' : 'items';
 
 const reducer = (state, action) => {
-    console.log(action);
+
     switch(action.type) {
         case 'ADD_TO_BASKET':
             return {
                 ...state,
-                basket: [...state.basket, action.item],
+                basket: 
+                    JSON.stringify(state.basket).indexOf(JSON.stringify(action.item)) === -1
+                        ? state.basket.concat(action.item)
+                        : state.basket
             };
         
         case 'REMOVE_FROM_BASKET':
