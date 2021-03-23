@@ -2,7 +2,7 @@ import React from 'react';
 import { useStateValue } from '../StateProvider';
 import Fade from 'react-reveal/Fade';
 
-function CheckoutProduct({ image, title, price, rating}) {
+function CheckoutProduct({id, image, title, price, rating }) {
     const [{ basket }, dispatch] = useStateValue();
 
     const removeFromBasket = () => {
@@ -22,7 +22,7 @@ function CheckoutProduct({ image, title, price, rating}) {
                     className='object-contain h-44 w-44 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-75 ' />
                 <div className='pl-7'>
                     <p className='text-sm font-bold w-96'>
-                        {title}
+                        {title} {id}
                     </p>
                     <p className='checkoutproduct_price'>
                         <small>$</small>

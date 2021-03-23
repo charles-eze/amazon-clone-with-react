@@ -4,7 +4,7 @@ import CheckoutProduct from './CheckoutProduct';
 import Subtotal from './Subtotal';
 
 function Checkout() {
-    const [{ basket }, dispatch] = useStateValue();
+    const [{ basket, user }, dispatch] = useStateValue();
 
     return (
         <div className='flex bg-white p-5'
@@ -14,12 +14,14 @@ function Checkout() {
                      src='https://images-na.ssl-images-amazon.com/images/G/02/UK_CCMP/TM/OCC_Amazon1._CB423492668_.jpg'
                      alt='Checkout Banner' />
                 <div>
+                    <h3 className='mr-2.5 py-2.5 pl-14 text-lg font-bold text-yellow-500'>{user ? `Hello, ${user?.email}` : 'You must be logged in to complete checkout.' }</h3>
                     <h2 className='mr-2.5 py-2.5 pl-14 border-b border-gray-300 font-bold text-xl font-sans'>
                         Your Shopping Basket
                     </h2>
                     <div className='pl-14'>
                         {basket.map(item => (
                             <CheckoutProduct 
+                                key={item.id}
                                 title={item.title}
                                 image={item.image}
                                 price={item.price}

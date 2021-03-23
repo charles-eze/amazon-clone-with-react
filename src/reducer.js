@@ -1,5 +1,6 @@
 export const initialState = {
     basket: [],
+    user: null
 };
 
 // Selector for calculating total price in basket
@@ -20,7 +21,7 @@ const reducer = (state, action) => {
                     JSON.stringify(state.basket).indexOf(JSON.stringify(action.item)) === -1
                         ? state.basket.concat(action.item)
                         : state.basket
-            };
+            }; //The line of code above ensures only unique items are added to basket.
         
         case 'REMOVE_FROM_BASKET':
             const index = state.basket.findIndex(
@@ -38,6 +39,12 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 basket:newBasket
+            }
+        
+        case 'SET_USER':
+            return {
+                ...state,
+                user: action.user
             }
 
         default:
