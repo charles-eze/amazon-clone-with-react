@@ -36,7 +36,7 @@ function ProductOne() {
                         <div className=' '>
                             <div className='lg:pt-5 pt-2  bg-white  px-0.5 md:px-2.5 lg:px-5'>
                                 <p className='ml-1 md:text-sm lg:text-xl pr-6 lg:pr-0 font-bold text-gray-900'
-                                    style={{fontSize: 8}}>{user ? 'welcome, Enjoy the best experience' : 'Sign in for the best experience'}</p>
+                                    style={{fontSize: 8}}>{user ? 'Welcome, enjoy the best experience' : 'Sign in for the best experience'}</p>
                                 <div onClick={handleAuth}
                                     className='lg:pt-4 pt-2.5 md:pt-3.5 px-1 pb-3 md:pb-4 lg:pb-7'>
                                     <Link to={!user && '/login'}>

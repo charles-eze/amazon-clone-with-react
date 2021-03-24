@@ -1,21 +1,26 @@
 import React from 'react';
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
-import { NavLink as Link } from "react-router-dom";
+import { NavLink as Link, useHistory } from "react-router-dom";
 import { useStateValue } from '../StateProvider';
 import { auth } from '../firebase';
 
 function Header() {
     // dispatch is not in use, left it here anyways
     const [{ basket, user }, dispatch] = useStateValue();
+    const history = useHistory(); 
 
    const handleAuth = () => {
         if (user) {
-            auth.signOut();
+            auth.signOut()
+            .then(auth => {
+                history.push('/')
+            })
+            .catch(error => alert(error.message))
         }
     }
 
-    const username = user?.email;
+    const username = user?.email; //The ? is called optional chaining. it prevents errors thrown while fetching user details from firebase.
     const shortUname = username?.slice(0, 5) 
      
     return (
@@ -51,7 +56,7 @@ function Header() {
                     <span className='md:text-sm md:font-bold' style={{fontSize: 6, fontWeight: 700}}>{'&'} Orders</span>
                 </div>
                 <div className='flex pr-1.5 items-center -mt-0.5 md:ml-2.5 md:px-0.5 lg:px-3 lg:py-0 md:mr-3 xl:border border-black hover:border-white'>
-                    <Link to='/checkout'>
+                    <Link to='/checkout' >
                         <ShoppingBasketIcon className='md:text-2xl' style={{fontSize: 10}}/>
                         <span className='md:text-sm md:font-bold md:mr-2.5' style={{fontSize: 6, fontWeight: 700}}>{basket?.length}</span>
                     </Link>

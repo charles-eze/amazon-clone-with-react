@@ -12,8 +12,8 @@ function ProductDisplay() {
                     src='https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Hero/Fuji_TallHero_Computers_1x._CB432469755_.jpg'
                     alt='Amazon banner 1' />
             
-                <div className='relative md:mx-auto justify-center -mt-12 md:-mt-64 '>
-                    <div className='grid grid-cols-2 z-10 mx-1 md:mx-1.5'>
+                <div className='relative lg:mx-auto justify-center -mt-12 md:-mt-24 lg:-mt-40 xl:-mt-64 '>
+                    <div className='grid grid-cols-2 z-10 mx-1 lg:mx-1.5'>
                         <ProductFiveItems
                             id={7023}
                             title={'Acer SB220Q bi 21.5 Inches Full HD (1920 x 1080) IPS Ultra-Thin Zero Frame Monitor (HDMI & VGA Port), Black'}
@@ -29,7 +29,7 @@ function ProductDisplay() {
                             price={79.97}
                             rating={5} />    
                     </div>
-                    <div className='grid md:grid-cols-3 grid-cols-2 z-10 mx-1 md:mx-1.5'>
+                    <div className='grid lg:grid-cols-3 grid-cols-2 z-10 mx-1 lg:mx-1.5'>
                         <ProductFiveItems
                             id={8563} 
                             title={'Webcam with Microphone for Desktop, 1080P HD USB Computer Cameras with Privacy Shutter and Webcam Tripod°'}
@@ -73,24 +73,24 @@ function ProductDisplay() {
                             price={986.87}
                             rating={4} />   
                     </div>
-                    <div className='grid grid-cols-2 z-10 mx-1 md:mx-1.5 -mb-9'>
+                    <div className='grid grid-cols-2 z-10 mx-1 lg:mx-1.5 '>
                         <ProductFiveItems
                             id={1423} 
-                            title={'RUNMUS Gaming Headset Xbox One Headset with 7.1 Surround Sound, PS4 Headset with Noise Canceling Mic & LED Light'}
-                            image='https://m.media-amazon.com/images/I/61lnzTv2a0L._AC_UL320_.jpg'
-                            imageAlt='headphone'
+                            title={'HP 902, 3 Ink Cartridges, Cyan, Magenta, Yellow, T6L86AN, T6L90AN, T6L94AN'}
+                            image='https://m.media-amazon.com/images/I/71AYsw9snZL._AC_UL320_.jpg'
+                            imageAlt='Catridge'
                             price={24.95}
-                            rating={4} />
+                            rating={3} />
                         <ProductFiveItems
                             id={5662} 
-                            title={'OtterBox DEFENDER SERIES Case for iPad 8th & 7th Gen (10.2" Display - 2020 & 2019 version) - BLACK'}
-                            image='https://m.media-amazon.com/images/I/51hF+sX2BWL._AC_UL320_.jpg'
-                            imageAlt='Ipad'
-                            price={40.99}
+                            title={'HP VH240a 23.8-Inch Full HD 1080p IPS LED Monitor with Built-In Speakers and VESA Mounting, Rotating Portrait'}
+                            image='https://m.media-amazon.com/images/I/71trhuzbhML._AC_UL320_.jpg'
+                            imageAlt='TV'
+                            price={876.44}
                             rating={5} />
                     </div>
                 </div>
-                <div className='relative md:-top-0 z-50 flex items-center hover:bg-gray-500 justify-center bg-gray-700 h-5 md:h-12 text-white'>
+                <div className='relative lg:-top-0 z-50 flex items-center hover:bg-gray-500 justify-center bg-gray-700 h-5 md:h-12 text-white'>
                 <a
                     href='#top' className='md:text-xs lg:text-sm '
                     style={{fontSize: 6}}>Back to top</a>

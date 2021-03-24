@@ -9,6 +9,7 @@ import Login from "./components/Login";
 import ScrollToTop from "./components/ScrollToTop";
 import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";
+import PaymentPage from "./components/PaymentPage";
 
 
 
@@ -53,6 +54,11 @@ function App() {
           <Header />
           <HeaderTwo />
           <Checkout />
+        </Route>
+        <Route component={ PaymentPage } path='/payment' >
+          <Header />
+          <HeaderTwo />
+          <PaymentPage />
         </Route>
         <Route component={ Login } path='/login' />
       </Switch>
