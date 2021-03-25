@@ -28,7 +28,7 @@ function Subtotal() {
                 value={getBasketTotal(basket)}
                 displayType={'text'}
                 thousandSeparator={true}
-                prefix={'$'}
+                prefix={'₦'}
             /> 
             <button style={{background: '#f0c14b', borderColor: '#a88734 #9c7e31 #846a29',}}
                     onClick={!user ? e => history.push('/login') : e => history.push('/payment')}

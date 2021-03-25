@@ -1,4 +1,5 @@
 import React from 'react';
+import CurrencyFormat from 'react-currency-format';
 import { useStateValue } from '../StateProvider';
 
 function ProductFiveItems({id, title, image, price, rating, imageAlt}) {
@@ -24,8 +25,18 @@ function ProductFiveItems({id, title, image, price, rating, imageAlt}) {
                 style={{fontSize: 9}}>
                 <p className=''>{title} {id}</p>
                 <p className='mt-1 md:mt-1.5'>
-                    <small>$</small>
-                    <strong>{price}</strong>
+                    <CurrencyFormat 
+                        renderText={(value, prefix) => (
+                            <h5>
+                                <small>{prefix}</small>
+                                <strong>{value}</strong>
+                            </h5>
+                        )}
+                        decimalScale={2}
+                        value={price}
+                        displayType={'text'}
+                        thousandSeparator={true}
+                        prefix={'₦'}/>
                 </p>
                 <div className='flex'>
                     {Array(rating).fill().map((_, i) => (<p>🌟</p>))}

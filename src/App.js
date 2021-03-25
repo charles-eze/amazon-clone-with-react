@@ -6,6 +6,7 @@ import Home from "./components/Home";
 import ProductDisplay from "./components/ProductDisplay";
 import Checkout from "./components/Checkout";
 import Login from "./components/Login";
+import Orders from "./components/Orders";
 import ScrollToTop from "./components/ScrollToTop";
 import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";
@@ -61,6 +62,7 @@ function App() {
           <PaymentPage />
         </Route>
         <Route component={ Login } path='/login' />
+        <Route component={ Orders } path='/orders' />
       </Switch>
     </BrowserRouter>
   );

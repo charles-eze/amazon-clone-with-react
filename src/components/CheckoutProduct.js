@@ -1,6 +1,7 @@
 import React from 'react';
 import { useStateValue } from '../StateProvider';
 import Fade from 'react-reveal/Fade';
+import CurrencyFormat from 'react-currency-format';
 
 function CheckoutProduct({id, image, title, price, rating }) {
     const [{ basket }, dispatch] = useStateValue();
@@ -24,9 +25,19 @@ function CheckoutProduct({id, image, title, price, rating }) {
                     <p className='text-xs md:text-sm font-bold md:w-72 lg:w-96 pr-5 md:pr-0'>
                         {title} {id}
                     </p>
-                    <p className='text-sm md:text-base'>
-                        <small>$</small>
-                        <strong>{price}</strong>
+                    <p>
+                        <CurrencyFormat 
+                        renderText={(value, prefix) => (
+                            <h5>
+                                <small>{prefix}</small>
+                                <strong>{value}</strong>
+                            </h5>
+                        )}
+                        decimalScale={2}
+                        value={price}
+                        displayType={'text'}
+                        thousandSeparator={true}
+                        prefix={'₦'}/>
                     </p>
                     <div className='flex text-sm md:text-base'>
                         {Array(rating).fill().map((_, i) => (<p>🌟</p>))}

@@ -35,7 +35,7 @@ function Header() {
                         alt='Amazon logo' />
                 </Link>
             </div>
-            <div className='flex h-3 md:h-10 w-3/5 md:w-96 lg:w-3/6 xl:w-7/12 md:items-center '>
+            <div className='flex h-3 md:h-10 w-2/5 md:w-80 lg:w-3/6 xl:w-7/12 md:items-center '>
                 <input 
                     type='text'
                     style={{fontSize: 6}}
@@ -48,11 +48,11 @@ function Header() {
                 <Link to={!user && '/login'}
                     onClick={handleAuth}
                     className='flex flex-col pt-1.5 md:pt-0 pr-2 md:pr-0 lg:pr-2 lg:ml-2.5 lg:px-3 lg:pb-0.5 xl:border border-black hover:border-white'>
-                    <span className='md:text-xs md:pt-2 -mb-0.5' style={{fontSize: 4}} >{user ? `Hello, ${shortUname}...` : 'Hello Guest' }</span>
+                    <span className='md:text-xs md:pt-2 -mb-0.5' style={{fontSize: 5}} >{user ? `Hello, ${shortUname}...` : 'Hello Guest' }</span>
                     <span className='md:text-sm md:font-bold' style={{fontSize: 6, fontWeight: 700}} >{user ? 'Sign out' : 'Sign in'}</span>
                 </Link>
                 <div className='flex flex-col pr-2 pt-1.5 md:pt-0 md:ml-2.5 md:px-1 lg:px-3 lg:pb-0.5 xl:border border-black hover:border-white'>
-                    <span className='md:text-xs -mb-0.5 md:pt-2' style={{fontSize: 4}} >Returns</span>
+                    <span className='md:text-xs -mb-0.5 md:pt-2' style={{fontSize: 5}} >Returns</span>
                     <span className='md:text-sm md:font-bold' style={{fontSize: 6, fontWeight: 700}}>{'&'} Orders</span>
                 </div>
                 <div className='flex pr-1.5 items-center -mt-0.5 md:ml-2.5 md:px-0.5 lg:px-3 lg:py-0 md:mr-3 xl:border border-black hover:border-white'>
