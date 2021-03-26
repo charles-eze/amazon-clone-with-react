@@ -51,10 +51,12 @@ function Header() {
                     <span className='md:text-xs md:pt-2 -mb-0.5' style={{fontSize: 5}} >{user ? `Hello, ${shortUname}...` : 'Hello Guest' }</span>
                     <span className='md:text-sm md:font-bold' style={{fontSize: 6, fontWeight: 700}} >{user ? 'Sign out' : 'Sign in'}</span>
                 </Link>
-                <div className='flex flex-col pr-2 pt-1.5 md:pt-0 md:ml-2.5 md:px-1 lg:px-3 lg:pb-0.5 xl:border border-black hover:border-white'>
-                    <span className='md:text-xs -mb-0.5 md:pt-2' style={{fontSize: 5}} >Returns</span>
-                    <span className='md:text-sm md:font-bold' style={{fontSize: 6, fontWeight: 700}}>{'&'} Orders</span>
-                </div>
+                <Link to={!user ? '/login' : '/orders'}>
+                    <div className='flex flex-col pr-2 pt-1.5 md:pt-0 md:ml-2.5 md:px-1 lg:px-3 lg:pb-0.5 xl:border border-black hover:border-white'>
+                        <span className='md:text-xs -mb-0.5 md:pt-2' style={{fontSize: 5}} >Returns</span>
+                        <span className='md:text-sm md:font-bold' style={{fontSize: 6, fontWeight: 700}}>{'&'} Orders</span>
+                    </div>
+                </Link>
                 <div className='flex pr-1.5 items-center -mt-0.5 md:ml-2.5 md:px-0.5 lg:px-3 lg:py-0 md:mr-3 xl:border border-black hover:border-white'>
                     <Link to='/checkout' >
                         <ShoppingBasketIcon className='md:text-2xl' style={{fontSize: 10}}/>

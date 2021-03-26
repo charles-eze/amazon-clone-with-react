@@ -22,6 +22,12 @@ const reducer = (state, action) => {
                         ? state.basket.concat(action.item)
                         : state.basket
             }; //The line of code above ensures only unique items are added to basket.
+
+        case 'EMPTY_BASKET':
+            return {
+                ...state,
+                basket: []
+            }
         
         case 'REMOVE_FROM_BASKET':
             const index = state.basket.findIndex(

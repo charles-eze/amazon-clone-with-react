@@ -6,6 +6,7 @@ import { Link, useHistory } from 'react-router-dom';
 import { getBasketTotal, itemOrItems } from '../reducer';
 import { useStateValue } from '../StateProvider';
 import CheckoutProduct from './CheckoutProduct';
+import { db } from '../firebase';
 
 
 function PaymentPage() {
@@ -45,9 +46,25 @@ function PaymentPage() {
                     card: elements.getElement(CardElement)
                 }
             }).then(({ paymentIntent }) => { //The PaymentIntent is destructured from the returned response. It is the payment confirmation.
+               
+                db
+                    .collection('users')
+                    .doc(user?.uid)
+                    .collection('orders')
+                    .doc(paymentIntent.id)
+                    .set({
+                        basket: basket,
+                        amount: paymentIntent.amount,
+                        created: paymentIntent.created
+                    })
+
                 setSucceeded(true);
                 setError(null);
                 setProcessing(false);
+
+                dispatch({
+                    type: 'EMPTY_BASKET'
+                })
 
                 history.replace('/orders')
             })
@@ -104,14 +121,16 @@ function PaymentPage() {
                     <div className='mb-11 md:ml-7 lg:ml-0'
                          style={{flex: 0.8}}>
                        
-                        <form onSubmit={handleSubmit}>
+                        <form 
+                            style={{maxWidth: 400}}
+                            onSubmit={handleSubmit}>
                             <CardElement 
                                 onChange={handleChange}/>
                                 
                             <div className=''>
                                 <CurrencyFormat 
                                     renderText={(value) => (
-                                        <h3 className='text-lg font-medium'>Order Total: 
+                                        <h3 className='text-lg font-medium pt-3 pb-4'>Order Total: 
                                             <span className='text-lg text-normal'> {value}</span>
                                         </h3>
                             
@@ -122,9 +141,14 @@ function PaymentPage() {
                                     thousandSeparator={true}
                                     prefix={'$'}/>
 
-                                <button disabled={processing || disabled || succeeded}>
-                                    <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
-                                </button>
+                                <div className='flex justify-center '>
+                                    <button 
+                                        style={{background: '#f0c14b', borderColor: '#a88734 #9c7e31 #846a29',}}
+                                        className='border md:h-7 w-6/12 text-xs py-1 mt-3 font-medium border-solid hover:bg-yellow-300 text-black md:text-sm focus:outline-none cursor-pointer focus:ring-1 focus:ring-red-300 rounded-sm'
+                                        disabled={processing || disabled || succeeded}>
+                                        <span>{processing ? <p className='font-medium text-gray-600'><i className="fa fa-circle-o-notch fa-spin font-normal text-gray-400 mr-1" style={{fontSize:18}}></i>Processing</p> : "Buy Now"}</span>
+                                    </button>
+                                </div>
                             </div> 
                             {/*The code below will throw an error on the screen when the card has issues */}
                             {error && <div>{error}</div>}

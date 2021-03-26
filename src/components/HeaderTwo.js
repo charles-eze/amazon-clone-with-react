@@ -18,28 +18,28 @@ function HeaderTwo() {
                         style={{fontSize: 5, fontWeight: 600}}>Today's Deals</Link>
                 </div>
                 <div className='pr-2 md:pr-3.5 lg:px-2 md:pt-0.5 xl:border border-transparent hover:border-white'>
-                    <a  
-                        href='https://amazon.com'
+                    <Link  
+                        to='/products'
                         className='md:py-1 md:text-xs lg:text-sm '
-                        style={{fontSize: 5, fontWeight: 600}}>Customer Service</a>
+                        style={{fontSize: 5, fontWeight: 600}}>Customer Service</Link>
                 </div>
                 <div className='pr-2 md:pr-3.5 lg:px-2 md:pt-0.5 xl:border border-transparent hover:border-white'>
-                    <a  
-                        href='https://amazon.com'
+                    <Link  
+                        to='/products'
                         className='md:py-1 md:text-xs lg:text-sm '
-                        style={{fontSize: 5, fontWeight: 600}}>Gift Cards</a>
+                        style={{fontSize: 5, fontWeight: 600}}>Gift Cards</Link>
                 </div>
                 <div className='pr-2 md:pr-3.5 lg:px-2 md:pt-0.5 xl:border border-transparent hover:border-white'>
-                    <a  
-                        href='https://amazon.com'
+                    <Link  
+                        to='/products'
                         className='md:py-1 md:text-xs lg:text-sm '
-                        style={{fontSize: 5, fontWeight: 600}}>Sell</a>
+                        style={{fontSize: 5, fontWeight: 600}}>Sell</Link>
                 </div>
                 <div className='pr-2 pb-2.5 md:pr-3.5 md:pt-0.5 lg:px-2 xl:border border-transparent hover:border-white'>
-                    <a  
-                        href='https://amazon.com'
+                    <Link  
+                        to='/products'
                         className='md:py-1 md:text-xs lg:text-sm '
-                        style={{fontSize: 5, fontWeight: 600}}>Registry</a>
+                        style={{fontSize: 5, fontWeight: 600}}>Registry</Link>
                 </div>
             </div>
             <div>
@@ -47,7 +47,7 @@ function HeaderTwo() {
                     <a 
                         className='md:py-1 md:text-xs lg:text-sm '
                         style={{fontSize: 5, fontWeight: 700}}
-                        href={'https://www.aboutamazon.com/company-news/amazons-actions-to-help-employees-communities-and-customers-affected-by-covid-19/?_encoding=UTF8&token=GW&utm_content=COVID-19_roundup&utm_medium=swm&utm_source=gateway&utm_term=gw03162020&ref_=nav_swm_undefined&pf_rd_p=5d2fb1a4-59ab-49fb-a348-f1080f4a79b0&pf_rd_s=nav-sitewide-msg-text-export&pf_rd_t=4201&pf_rd_i=navbar-4201&pf_rd_m=ATVPDKIKX0DER&pf_rd_r=Q8WGPTYDNSXN53CQKWXQ'}
+                        href='https://github.com/charles-eze/amazon-clone-with-react'
                         target='_blank'
                         rel='noreferrer'>Amazon's response to COVID-19</a>
                 </div>
