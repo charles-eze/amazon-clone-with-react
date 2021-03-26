@@ -11,6 +11,10 @@ import ScrollToTop from "./components/ScrollToTop";
 import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";
 import PaymentPage from "./components/PaymentPage";
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+
+const promise = loadStripe('pk_test_51IZ0lgHpeRC1eUPAigAxrVfxXzLANjrDR4Fr0sz37x3NS8KKPw7zexgE26bgwNhwPs3iPTI1ICPRu3M2s4MPWXro007JnLaRkZ');
 
 
 
@@ -59,10 +63,16 @@ function App() {
         <Route component={ PaymentPage } path='/payment' >
           <Header />
           <HeaderTwo />
-          <PaymentPage />
+          <Elements stripe={promise}>
+            <PaymentPage />
+          </Elements>
         </Route>
         <Route component={ Login } path='/login' />
-        <Route component={ Orders } path='/orders' />
+        <Route component={ Orders } path='/orders' >
+          <Header />
+          <HeaderTwo />
+          <Orders />
+        </Route>
       </Switch>
     </BrowserRouter>
   );

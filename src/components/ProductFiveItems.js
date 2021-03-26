@@ -24,7 +24,7 @@ function ProductFiveItems({id, title, image, price, rating, imageAlt}) {
             <div className='lg:h-24 lg:mb-4 h-12 md:text-base leading-tight md:leading-snug '
                 style={{fontSize: 9}}>
                 <p className=''>{title} {id}</p>
-                <p className='mt-1 md:mt-1.5'>
+                <div className='mt-1 md:mt-1.5'>
                     <CurrencyFormat 
                         renderText={(value, prefix) => (
                             <h5>
@@ -37,7 +37,7 @@ function ProductFiveItems({id, title, image, price, rating, imageAlt}) {
                         displayType={'text'}
                         thousandSeparator={true}
                         prefix={'₦'}/>
-                </p>
+                </div>
                 <div className='flex'>
                     {Array(rating).fill().map((_, i) => (<p>🌟</p>))}
                     

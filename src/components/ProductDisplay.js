@@ -26,7 +26,7 @@ function ProductDisplay() {
                             title={'Sceptre 20" 1600x900 75Hz Ultra Thin LED Monitor 2x HDMI VGA Built-in Speakers, Machine Black Wide Viewing Angle 170°'}
                             image='https://m.media-amazon.com/images/I/617S7xFO58L._AC_UL320_.jpg'
                             imageAlt='LED Monitor'
-                            price={76899.97}
+                            price={1899.97}
                             rating={5} />    
                     </div>
                     <div className='grid lg:grid-cols-3 grid-cols-2 z-10 mx-1 lg:mx-1.5'>

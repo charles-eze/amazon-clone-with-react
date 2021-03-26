@@ -2,11 +2,9 @@ import React from 'react';
 import { useFlutterwave, closePaymentModal } from 'flutterwave-react-v3';
 import { useStateValue } from '../StateProvider';
 import { getBasketTotal } from '../reducer';
-import { useHistory } from 'react-router';
-import { Link } from 'react-router-dom';
+import { db } from '../firebase';
 
 export default function FlutterWave() {
-    const history = useHistory();
 
     const [{ basket, user }, dispatch] = useStateValue();
 
@@ -15,7 +13,7 @@ export default function FlutterWave() {
         tx_ref: Date.now(),
         amount: getBasketTotal(basket),
         currency: 'NGN',
-        redirect_url : 'src\components\Orders.js',
+        redirect_url : 'http://localhost:3000/orders',
         payment_options: 'card,mobilemoney,ussd,',
         customer: {
         email: user?.email,
@@ -31,6 +29,7 @@ export default function FlutterWave() {
 
     const handleFlutterPayment = useFlutterwave(config);
 
+    
     return (
         <button
             className='text-gray-900 border px-3 py-0.5  border-solid hover:bg-yellow-300 text-xs md:text-sm focus:outline-none cursor-pointer focus:ring-1 focus:ring-red-300 rounded-sm'

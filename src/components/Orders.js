@@ -3,7 +3,7 @@ import React from 'react';
 function Orders() {
     return (
         <div>
-            <h1>This is the Orders Page Bai</h1>
+            <h1>Your Orders</h1>
         </div>
     )
 }

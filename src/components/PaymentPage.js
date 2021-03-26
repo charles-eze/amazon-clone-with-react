@@ -1,13 +1,65 @@
-import React from 'react';
+import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
+import axios from '../axios';
+import React, { useEffect, useState } from 'react';
 import CurrencyFormat from 'react-currency-format';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { getBasketTotal, itemOrItems } from '../reducer';
 import { useStateValue } from '../StateProvider';
 import CheckoutProduct from './CheckoutProduct';
-import FlutterWave from './FlutterWave';
+
 
 function PaymentPage() {
-    const [{ basket, user }, dispatch] = useStateValue();
+    const [{ basket, user }, dispatch] = useStateValue(); 
+    const history = useHistory();  
+
+    const stripe = useStripe();
+    const elements = useElements();
+
+    const [succeeded, setSucceeded] = useState(false);
+    const [processing, setProcessing] = useState("");
+    const [error, setError] = useState(null);
+    const [disabled, setDisabled] =useState(true);
+    const [clientSecret, setClientSecret] = useState(true);
+
+    useEffect(() => {
+        //This code allows us to generate the client secret and also changes it when the basket changes
+        const getClientSecret = async () => {
+            const response = await axios({
+                method: 'post',
+                url: `/payments/create?total=${getBasketTotal(basket) * 100}`
+            }); //Use axios to make requests either POST, GET
+             setClientSecret(response.data.clientSecret)
+        }
+        getClientSecret();
+    }, [basket])
+
+    console.log('THE SECRET IS >>>>', clientSecret)
+
+    const handleSubmit = async (event) => {
+            //stripe actions here
+            event.preventDefault();
+            setProcessing(true);
+        
+            const payload = await stripe.confirmCardPayment(clientSecret, {
+                payment_method: {
+                    card: elements.getElement(CardElement)
+                }
+            }).then(({ paymentIntent }) => { //The PaymentIntent is destructured from the returned response. It is the payment confirmation.
+                setSucceeded(true);
+                setError(null);
+                setProcessing(false);
+
+                history.replace('/orders')
+            })
+    };
+
+    const handleChange = event => {
+        //This function will listen for changes in the CardElement and display
+        // the errors that will occur while the user types in their card
+        setDisabled(event.empty);
+        setError(event.error ? event.error.message : "");
+
+    };
 
     return (
         <div className='bg-white font-sans '>
@@ -51,21 +103,34 @@ function PaymentPage() {
                     </div>
                     <div className='mb-11 md:ml-7 lg:ml-0'
                          style={{flex: 0.8}}>
-                        <div className='lg:-mt-6 mb-3.5'>
-                            <CurrencyFormat 
-                                renderText={(value) => (
-                                    <h3 className='text-lg font-medium'>Order Total: 
-                                        <span className='text-lg text-normal'> {value}</span>
-                                    </h3>
+                       
+                        <form onSubmit={handleSubmit}>
+                            <CardElement 
+                                onChange={handleChange}/>
+                                
+                            <div className=''>
+                                <CurrencyFormat 
+                                    renderText={(value) => (
+                                        <h3 className='text-lg font-medium'>Order Total: 
+                                            <span className='text-lg text-normal'> {value}</span>
+                                        </h3>
+                            
+                                    )}
+                                    decimalScale={2}
+                                    value={getBasketTotal(basket)}
+                                    displayType={'text'}
+                                    thousandSeparator={true}
+                                    prefix={'$'}/>
+
+                                <button disabled={processing || disabled || succeeded}>
+                                    <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
+                                </button>
+                            </div> 
+                            {/*The code below will throw an error on the screen when the card has issues */}
+                            {error && <div>{error}</div>}
+                           
+                        </form>
                         
-                                )}
-                                decimalScale={2}
-                                value={getBasketTotal(basket)}
-                                displayType={'text'}
-                                thousandSeparator={true}
-                                prefix={'₦'}/>
-                        </div> 
-                        <FlutterWave />
 
                     </div>
 
