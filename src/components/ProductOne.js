@@ -41,8 +41,8 @@ function ProductOne() {
                                     className='lg:pt-4 pt-2.5 md:pt-3.5 px-1 pb-3 md:pb-4 lg:pb-7'>
                                     <Link to={!user && '/login'}>
                                         <button 
-                                        className='md:py-1 py-0.5 lg:px-20 flex justify-center w-full lg:ml-1.5 md:text-sm text-gray-900 border border-yellow-500 focus:outline-none cursor-pointer focus:ring-1 focus:ring-red-300 rounded-sm md:rounded font-medium bg-yellow-300 hover:bg-yellow-400'
-                                        style={{fontSize: 6}}>{user ? 'Sign Out' : 'Sign in securely'}</button>
+                                        className='md:py-1 py-0.5 lg:px-20 flex justify-center w-full lg:ml-1.5 md:text-sm text-gray-900 border focus:outline-none cursor-pointer focus:ring-1 focus:ring-red-300 rounded-sm md:rounded font-medium hover:bg-yellow-300'
+                                        style={{background: '#f0c14b', borderColor: '#a88734 #9c7e31 #846a29', fontSize: 6, }}>{user ? 'Sign Out' : 'Sign in securely'}</button>
                                     </Link>
                                 </div>
                             </div>

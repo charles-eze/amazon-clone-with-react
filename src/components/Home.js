@@ -35,8 +35,8 @@ function Home() {
                 <div className=' md:pt-5 pt-1 relative md:-mb-3 ' onClick={handleAuth}>
                     <Link to={!user && '/login'} >
                         <button 
-                            className='md:py-1 py-0.5 w-full px-1.5 lg:px-3 md:text-xs lg:text-sm text-gray-900 border font-semibold border-yellow-500 focus:outline-none cursor-pointer focus:ring-1 focus:ring-red-300 rounded-sm md:rounded bg-yellow-300 hover:bg-yellow-400 '
-                            style={{fontSize: 6}}>{user ? `Hello ${user.email}, Sign Out` : 'Sign in to see personalized recommendations' }</button>
+                            className='md:py-1 py-0.5 w-full px-3 md:text-xs lg:text-sm text-gray-900 border font-semibold focus:outline-none cursor-pointer focus:ring-1 focus:ring-red-300 rounded-sm md:rounded hover:bg-yellow-300 '
+                            style={{background: '#f0c14b', borderColor: '#a88734 #9c7e31 #846a29', fontSize: 6, }}>{user ? `Hello ${user.email}, Sign Out` : 'Sign in to see personalized recommendations' }</button>
                     </Link>
                 </div>
             </div>

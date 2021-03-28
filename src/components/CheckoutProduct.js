@@ -3,7 +3,7 @@ import { useStateValue } from '../StateProvider';
 import Fade from 'react-reveal/Fade';
 import CurrencyFormat from 'react-currency-format';
 
-function CheckoutProduct({id, image, title, price, rating, hideButton }) {
+function CheckoutProduct({image, title, price, rating, hideButton }) {
     const [{ basket }, dispatch] = useStateValue();
 
     const removeFromBasket = () => {
@@ -22,10 +22,11 @@ function CheckoutProduct({id, image, title, price, rating, hideButton }) {
                     src={image}
                     className='object-contain h-28 w-24 md:h-44 md:w-44 transition duration-700 ease-out transform hover:-translate-y-1 hover:scale-75 ' />
                 <div className='md:pl-7 pl-3'>
-                    <p className='text-xs md:text-sm font-bold md:w-72 lg:w-96 pr-5 md:pr-0'>
-                        {title} {id}
+                    <p className='text-xs md:text-sm font-semibold md:w-72 lg:w-96 pr-5 md:pr-0'>
+                        {title}
                     </p>
-                    <p>
+                    <p className='flex'>
+                        <small>$</small>
                         <CurrencyFormat 
                         renderText={(value, prefix) => (
                             <h5>
@@ -37,7 +38,7 @@ function CheckoutProduct({id, image, title, price, rating, hideButton }) {
                         value={price}
                         displayType={'text'}
                         thousandSeparator={true}
-                        prefix={'₦'}/>
+                        prefix={''}/>
                     </p>
                     <div className='flex text-sm md:text-base'>
                         {Array(rating).fill().map((_, i) => (<p>🌟</p>))}

@@ -85,11 +85,11 @@ function PaymentPage() {
                     Checkout <Link className='text-purple-600' to='/checkout'>({basket?.length} {itemOrItems(basket)})</Link>
                 </h1>
                 <div className='md:flex px-5 py-2 md:p-5 mx-0 md:my-5 border-b border-gray-300 border-solid'>
-                    <div className='text-lg font-medium mb-4 md:mb-0'
+                    <div className='text-base md:text-lg font-medium mb-4 md:mb-0'
                         style={{flex: 0.2}}>
-                        <h3>Delivery Address</h3>
+                        <h3 className='font-medium'>Delivery Address</h3>
                     </div>
-                    <div className='md:ml-7 lg:ml-0'
+                    <div className='md:ml-7 lg:ml-0 text-sm md:text-base'
                          style={{flex: 0.8}}>
                         <p>{user?.email}</p>
                         <p>No 2 Rayxxon Street</p>
@@ -97,7 +97,7 @@ function PaymentPage() {
                     </div>
                 </div>
                 <div className='md:flex px-5 py-2 md:p-5 mx-0 md:my-5 border-b border-gray-300 border-solid'>
-                    <div className='text-lg font-medium mb-4 md:mb-0'
+                    <div className='text-base md:text-lg font-medium mb-4 md:mb-0'
                          style={{flex: 0.2}}>
                         <h3>Review items and delivery</h3>
                     </div>
@@ -114,7 +114,7 @@ function PaymentPage() {
                     </div>
                 </div>
                 <div className='md:flex px-5 py-2 md:p-5 mx-0 md:my-5 border-b border-gray-300 border-solid'>
-                    <div className='text-lg font-medium mb-4 md:mb-0'
+                    <div className='text-base md:text-lg font-medium mb-4 md:mb-0'
                          style={{flex: 0.2}}>
                         <h3>Payment Method</h3>
                     </div>
@@ -130,8 +130,8 @@ function PaymentPage() {
                             <div className=''>
                                 <CurrencyFormat 
                                     renderText={(value) => (
-                                        <h3 className='text-lg font-medium pt-3 pb-4'>Order Total: 
-                                            <span className='text-lg text-normal'> {value}</span>
+                                        <h3 className='text-base md:text-lg font-medium pt-3 pb-3'>Order Total: 
+                                            <span className='text-base md:text-lg font-medium'> {value}</span>
                                         </h3>
                             
                                     )}
@@ -141,7 +141,7 @@ function PaymentPage() {
                                     thousandSeparator={true}
                                     prefix={'$'}/>
 
-                                <div className='flex justify-center '>
+                                <div className='flex justify-center'>
                                     <button 
                                         style={{background: '#f0c14b', borderColor: '#a88734 #9c7e31 #846a29',}}
                                         className='border md:h-7 w-6/12 text-xs py-1 mt-3 font-medium border-solid hover:bg-yellow-300 text-black md:text-sm focus:outline-none cursor-pointer focus:ring-1 focus:ring-red-300 rounded-sm'
@@ -152,7 +152,7 @@ function PaymentPage() {
                             </div> 
                             {/*The code below will throw an error on the screen when the card has issues */}
                             {error && <div>{error}</div>}
-                           
+                           <div className='mb-32'></div>
                         </form>
                         
 

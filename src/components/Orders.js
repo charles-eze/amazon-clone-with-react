@@ -26,8 +26,8 @@ function Orders() {
     }, [user]);
 
     return (
-        <div className='py-5 px-20 bg-gray-100'>
-            <h1 className='py-7'>Your Orders</h1>
+        <div className='py-2.5 md:py-5 px-3.5 md:px-11 lg:px-20 bg-gray-100'>
+            <h1 className='py-3.5 md:py-7 text-base md:text-xl font-sans font-bold'>Your Orders</h1>
             <div>
                 {orders?.map(order => (
                     <Order order={order} />

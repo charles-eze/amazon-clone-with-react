@@ -19,13 +19,12 @@ function Checkout() {
             
                 <div>
                     <h3 className='lg:mr-2.5 py-2.5 pl-5 lg:pl-14 text-sm md:text-base lg:text-lg font-bold text-yellow-500'>{user ? `Hello, ${user?.email}` : 'You must be logged in to complete checkout.' }</h3>
-                    <h2 className='lg:mr-2.5 py-2.5 pl-5 lg:pl-14 border-b border-gray-300 font-bold text-xl font-sans'>
+                    <h2 className='lg:mr-2.5 py-2.5 pl-5 lg:pl-14 border-b border-gray-300 font-bold text-lg md:text-xl font-sans'>
                         {basket?.length <= 0 ? 'The Shopping Basket is Empty' : 'Your Shopping Basket'}
                     </h2>
                     <div className='pl-3 md:pl-14 mb-20'>
                         {basket.map(item => (
                             <CheckoutProduct 
-                                id={item?.id}
                                 title={item?.title}
                                 image={item?.image}
                                 price={item?.price}

@@ -15,7 +15,6 @@ function ProductDisplay() {
                 <div className='relative lg:mx-auto justify-center -mt-12 md:-mt-24 lg:-mt-40 xl:-mt-64 '>
                     <div className='grid grid-cols-2 z-10 mx-1 lg:mx-1.5'>
                         <ProductFiveItems
-                            id={7023}
                             title={'Acer SB220Q bi 21.5 Inches Full HD (1920 x 1080) IPS Ultra-Thin Zero Frame Monitor (HDMI & VGA Port), Black'}
                             image='https://m.media-amazon.com/images/I/81QpkIctqPL._AC_UL320_.jpg'
                             imageAlt='Black TV'
@@ -23,7 +22,7 @@ function ProductDisplay() {
                             rating={4}  />
                         <ProductFiveItems
                             id={9045}
-                            title={'Sceptre 20" 1600x900 75Hz Ultra Thin LED Monitor 2x HDMI VGA Built-in Speakers, Machine Black Wide Viewing Angle 170°'}
+                            title={'Sceptre 20" Ultra Thin LED Monitor 2x HDMI VGA Built-in Speakers, Wide Viewing Angle 170°'}
                             image='https://m.media-amazon.com/images/I/617S7xFO58L._AC_UL320_.jpg'
                             imageAlt='LED Monitor'
                             price={998.97}
@@ -31,8 +30,7 @@ function ProductDisplay() {
                     </div>
                     <div className='grid lg:grid-cols-3 grid-cols-2 z-10 mx-1 lg:mx-1.5'>
                         <ProductFiveItems
-                            id={8563} 
-                            title={'Webcam with Microphone for Desktop, 1080P HD USB Computer Cameras with Privacy Shutter and Webcam Tripod°'}
+                            title={'Webcam with Microphone for Desktop, 1080P HD USB Computer Cameras with Privacy Shutter & Tripod°'}
                             image='https://m.media-amazon.com/images/I/71vPDq1rWDL._AC_UL320_.jpg'
                             imageAlt='tripod webcam'
                             price={95.99}
