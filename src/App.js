@@ -20,6 +20,7 @@ const promise = loadStripe('pk_test_51IZ0lgHpeRC1eUPAigAxrVfxXzLANjrDR4Fr0sz37x3
 
 function App() {
   const [{}, dispatch] = useStateValue();
+ 
 
   useEffect(() => {
     auth.onAuthStateChanged(authUser => {

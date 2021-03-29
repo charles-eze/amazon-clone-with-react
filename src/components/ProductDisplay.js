@@ -15,6 +15,7 @@ function ProductDisplay() {
                 <div className='relative lg:mx-auto justify-center -mt-12 md:-mt-24 lg:-mt-40 xl:-mt-64 '>
                     <div className='grid grid-cols-2 z-10 mx-1 lg:mx-1.5'>
                         <ProductFiveItems
+                            id={7721}
                             title={'Acer SB220Q bi 21.5 Inches Full HD (1920 x 1080) IPS Ultra-Thin Zero Frame Monitor (HDMI & VGA Port), Black'}
                             image='https://m.media-amazon.com/images/I/81QpkIctqPL._AC_UL320_.jpg'
                             imageAlt='Black TV'
@@ -30,6 +31,7 @@ function ProductDisplay() {
                     </div>
                     <div className='grid lg:grid-cols-3 grid-cols-2 z-10 mx-1 lg:mx-1.5'>
                         <ProductFiveItems
+                            id={7763}
                             title={'Webcam with Microphone for Desktop, 1080P HD USB Computer Cameras with Privacy Shutter & Tripod°'}
                             image='https://m.media-amazon.com/images/I/71vPDq1rWDL._AC_UL320_.jpg'
                             imageAlt='tripod webcam'
@@ -64,7 +66,7 @@ function ProductDisplay() {
                             price={2284.34}
                             rating={5} /> 
                         <ProductFiveItems 
-                            id={'0064'}
+                            id={8874}
                             title={'Fujitsu ScanSnap iX1600 Versatile Cloud Enabled Document Scanner for Mac or PC, Black'}
                             image='https://m.media-amazon.com/images/I/71u7Psu+y7L._AC_UL320_.jpg'
                             imageAlt='Lenovo tab'

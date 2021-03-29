@@ -7,7 +7,7 @@ export const initialState = {
 export const getBasketTotal = (basket) =>
     basket?.reduce((amount, item) => item.price + amount, 0);
 
- // Say item for 0 and 1 number of products in the checkout or two for more than one
+ // Say item for 0 and 1 number of products in the checkout or items for more than one
 export const itemOrItems = (basket) =>
     basket?.length === 0 || basket?.length === 1 ? 'item' : 'items';
 
