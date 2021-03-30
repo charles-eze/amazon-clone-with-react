@@ -85,7 +85,7 @@ function Footer() {
                     src='http://pngimg.com/uploads/amazon/amazon_PNG11.png'
                     alt='Amazon footer logo'/>
                 <p className='pl-12 md:text-base'
-                    style={{fontSize: 7}}>©️ {new Date().getFullYear()}, Amazon-Clone Developed By Charles Eze</p>
+                    style={{fontSize: 7}}>©️ {new Date().getFullYear()}, Amazon-Clone Developed By Charles Eze💓</p>
             </Link>
         </footer>
     )
