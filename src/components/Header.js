@@ -57,12 +57,10 @@ function Header() {
                         <span className='md:text-sm md:font-bold' style={{fontSize: 6, fontWeight: 700}}>{'&'} Orders</span>
                     </div>
                 </Link>
-                <div className='flex pr-1.5 items-center -mt-0.5 md:ml-2.5 md:px-0.5 lg:px-3 lg:py-0 md:mr-3 xl:border border-black hover:border-white'>
-                    <Link to='/checkout' >
+                <Link to='/checkout' className='flex pr-1.5 items-center -mt-0.5 md:ml-2.5 md:px-0.5 lg:px-3 lg:py-0 md:mr-3 xl:border border-black hover:border-white'>
                         <ShoppingBasketIcon className='md:text-2xl' style={{fontSize: 10}}/>
                         <span className='md:text-sm md:font-bold md:mr-2.5' style={{fontSize: 6, fontWeight: 700}}>{basket?.length}</span>
-                    </Link>
-                </div>
+                </Link>
 
             </div>
             
