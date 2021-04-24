@@ -12,7 +12,7 @@
 
 ## General info
 
-This fullstack clone app autheticates users, adds to card, removes from cart, processes and recieves payments and also pushes the orders to the database. it is very reponsive to different screen sizes.
+This fullstack clone app authenticates users, adds to card, removes from cart, processes and receives payments and also pushes the orders to the database. it is very responsive to different screen sizes.
 
 ## Technologies
 
