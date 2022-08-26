@@ -37,6 +37,4 @@ Visit `www.tailwindcss.com/docs` to learn about Tailwind installation and utilit
 
 Project is: _completed_
 
-## Inspiration
 
-As a self taught developer, building apps is the surest way to learn and improve my skills.
